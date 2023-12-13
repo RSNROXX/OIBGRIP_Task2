@@ -15,6 +15,10 @@ body {
 #about .fp-slide,
 #about .fp-tableCell,
 
+#experience,
+#experience .fp-slide,
+#experience .fp-tableCell,
+
 #skill,
 #skill .fp-slide,
 #skill .fp-tableCell,
@@ -49,6 +53,7 @@ h5 {
 
 /* start all section */
 #about,
+#experience
 #skill,
 #project,
 #contact {
@@ -162,16 +167,37 @@ h5 {
 }
 
 #home h1 {
-    color: #FBFCD4;
+    font-size: 5em;
+    color: #2d2d2d;
     display: inline-block;
     letter-spacing: 2px;
-    padding: 25px 35px;
+    padding: 25px 20px;
     margin: 30px 0;
 }
 
+/* for animation of name */
+.animated-gradient {
+    background-image: -webkit-linear-gradient(120deg, #2d2d2d, #FBC403, #FBFCD4);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: hue 40s infinite initial;
+}
+
+@keyframes hue {
+    from {
+        -webkit-filter: hue-rotate(0deg);
+    }
+
+    to {
+        -webkit-filter: hue-rotate(-360deg);
+    }
+}
+
+
 #home h2 {
+    font-size: 4em;
     color: #FBC403;
-    padding-bottom: 2.1em;
+    padding-bottom: 1em;
 }
 
 #home .btn {
