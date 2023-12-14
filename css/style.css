@@ -1,9 +1,18 @@
 body {
+    overflow: scroll;
+    overflow-x: hidden;
     background: #000000;
     color: rgb(82, 82, 82);
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
     font-weight: 400;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
 }
 
 /* start all section */
@@ -53,8 +62,7 @@ h5 {
 
 /* start all section */
 #about,
-#experience
-#skill,
+#experience #skill,
 #project,
 #contact {
     padding-top: 5em;
@@ -177,10 +185,10 @@ h5 {
 
 /* for animation of name */
 .animated-gradient {
-    background-image: -webkit-linear-gradient(120deg, #2d2d2d, #FBC403, #FBFCD4);
+    background-image: -webkit-linear-gradient(125deg, #2d2d2d, #FBC403, #FBFCD4);
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: hue 40s infinite initial;
+    animation: hue 25s infinite;
 }
 
 @keyframes hue {
@@ -288,16 +296,18 @@ h5 {
 
 /* start skill */
 #skill {
+    padding-bottom: 2em;
     background-color: #FFDD03;
 }
 
 #skill h2 {
+    padding: 2em 0 1.5em;
     color: #000000;
     text-align: center;
 }
 
 #skill h4 {
-    padding: 15px 0;
+    padding: 10px 0;
     color: #000000;
 }
 
@@ -312,7 +322,7 @@ h5 {
 }
 
 #skill .text-top {
-    padding-top: 50px;
+    padding-top: 2em;
 }
 
 #skill span {
@@ -329,10 +339,27 @@ h5 {
 
 /* end skill */
 
+/* start experience */
+#experience {
+    background-color: #1a1a1a;
+}
+
+#experience h2 {
+    padding: 2em 2em;
+    text-align: center;
+}
+
+/* end experience */
+
 /* start project */
 #project {
-    background: #1a1a1a;
+    background: #FFDD03;
     text-align: center;
+}
+
+#project h2 {
+    color: #000000;
+    padding: 0 0 2em;
 }
 
 .flip-card {
@@ -368,18 +395,17 @@ h5 {
 
 .flip-card-front {
     background-color: #bbb;
-    color: black;
 }
 
 .flip-card-back {
-    background-color: #FBC403;
+    background-color: #1a1a1a;
     padding: 1em 1em;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     transform: rotateY(180deg);
 }
 
 .flip-card-back a {
-    color: #ffffff;
+    color: #FFDD03;
     font-style: italic;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 30px;
@@ -388,7 +414,8 @@ h5 {
 
 .flip-card-back a:hover {
     text-decoration: underline;
-    color: #000000;
+    font-style: normal;
+    color: #ffffff;
     font-size: 30px;
 }
 
@@ -399,7 +426,7 @@ h5 {
 }
 
 #project .project-thumb .project-overlay {
-    background: #FBC403;
+    background: #1a1a1a;
     top: 0;
     left: 0;
     right: 0;
@@ -422,24 +449,28 @@ h5 {
 
 /* start contact */
 #contact {
-    background-color: #FFDD03;
+    background-color: #1a1a1a;
 }
 
 #contact address {
     padding-bottom: 18px;
 }
 
+#contact p {
+    color: #FFDD03;
+}
+
 #contact .contact-title {
     font-size: 24px;
     font-weight: bold;
     padding-bottom: 20px;
-    color: #000000;
+    color: #FFDD03;
 }
 
 #contact .fa {
-    border: 2px solid #000000;
+    border: 2px solid #FFDD03;
     border-radius: 50%;
-    color: #000000;
+    color: #FFDD03;
     width: 50px;
     height: 50px;
     line-height: 45px;
@@ -449,10 +480,10 @@ h5 {
 
 #contact .form-control {
     background: transparent;
-    border: 2px solid #000000;
+    border: 2px solid #FFDD03;
     border-radius: 0;
     box-shadow: none;
-    color: #000000;
+    color: #FFDD03;
     margin-bottom: 20px;
 }
 
@@ -462,31 +493,30 @@ h5 {
 
 #contact input[type="submit"] {
     width: 50%;
-    background: #ffffff;
+    background: #FFDD03;
     border: 2px solid transparent;
-    color: #000000;
+    color: #1a1a1a;
     font-weight: bold;
     transition: all 0.4s ease-in-out;
 }
 
 #contact input[type="submit"]:hover {
-    background: #000000;
+    background: #0f0f0f;
     color: #FFD700;
 }
 
 #contact ::placeholder {
-    color: #000000;
+    color: #FFDD03;
 }
 
 /* end contact */
 
 /* start footer */
 footer {
-    background-color: #1a1a1a;
+    background-color: #303030;
     border-top: 1px solid #1a1a1a;
     text-align: center;
-    padding-top: 40px;
-    padding-bottom: 20px;
+    padding: 40px 20px;
 }
 
 footer hr {
@@ -515,7 +545,7 @@ footer p {
 .social-icon li a {
     font-size: 21px;
     border-radius: 50%;
-    color: #ffffff;
+    color: #FFDD03;
     text-decoration: none;
     transition: all 0.4s ease-in-out;
     text-align: center;
@@ -523,7 +553,7 @@ footer p {
 }
 
 .social-icon li a:hover {
-    color: #FFD700;
+    color: #1a1a1a;
 }
 
 /* end social icon */
